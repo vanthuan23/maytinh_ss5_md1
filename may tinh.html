@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        lable {
+            font-family: Georgia;
+            font-size: 60px;
+            padding: 30px;
+        }
+
+        input {
+            margin: 30px 20px;
+            padding: 10px;
+        }
+
+        button {
+            margin: 30px 20px;
+        }
+    </style>
+</head>
+<body>
+<lable>Caculator</lable>
+<br>
+<input type="text" id="input1">
+<input type="text" id="input2"><br>
+<button onclick="Addition()">Adddition(+)</button>
+<button onclick="Subtraction()">Subtraction(-)</button>
+<button onclick="Multiplication()">Multiplication(*)</button>
+<button onclick="Division()">Division(/)</button>
+<p id="result"></p>
+<script>
+    function Addition() {
+        let input1 = +document.getElementById('input1').value;
+
+        let input2 = +document.getElementById('input2').value;
+        let add = input1 + input2;
+        document.getElementById('result').innerHTML = ' Result Addition : ' + add;
+    }
+
+    function Subtraction() {
+        let input1 = +document.getElementById('input1').value;
+
+        let input2 = +document.getElementById('input2').value;
+        let sub = input1 - input2;
+        document.getElementById('result').innerHTML = ' Result Subtraction : ' + sub;
+    }
+
+    function Multiplication() {
+        let input1 = +document.getElementById('input1').value;
+
+        let input2 = +document.getElementById('input2').value;
+        let mul = input1 * input2;
+        document.getElementById('result').innerHTML = ' Result Multiplication : ' + mul;
+    }
+
+    function Division() {
+        let input1 = +document.getElementById('input1').value;
+
+        let input2 = +document.getElementById('input2').value;
+        let div = input1 / input2;
+        document.getElementById('result').innerHTML = ' Result Division : ' + div;
+    }
+</script>
+</body>
+</html>
